@@ -7,7 +7,7 @@ import time
 
 #loading data
 
-loader = PyPDFDirectoryLoader('data/ESD')
+loader = PyPDFDirectoryLoader('data/')
 documents = loader.load()
 print(len(documents))
 
@@ -31,7 +31,7 @@ print('Embeddings loaded!')
 # creating NCERT Textbooks vector database.
 
 t1 = time.time()
-persist_directory = 'esd'
+persist_directory = 'dbname'
 vectordb = Chroma.from_documents(
     documents = text_chunks,
     embedding = embeddings,

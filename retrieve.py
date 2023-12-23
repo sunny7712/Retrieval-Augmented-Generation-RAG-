@@ -16,7 +16,7 @@ def load_vector_store():
         model_name=model_name, model_kwargs=model_kwargs, encode_kwargs=encode_kwargs
     )
     print('Embeddings loaded!')
-    load_vector_store = Chroma(persist_directory = 'esd', embedding_function = embeddings)
+    load_vector_store = Chroma(persist_directory = 'vector stores/ncertdb', embedding_function = embeddings)
     print('Vector store loaded!')
 
     retriever = load_vector_store.as_retriever(

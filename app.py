@@ -4,8 +4,8 @@ import streamlit as st
 
 def main():
     qa = qa_chain()
-    st.title('Embedded GPT')
-    text_query = st.text_area('Ask any question from ARM or PIC Microcontroller!')
+    st.title('NCERT-GPT')
+    text_query = st.text_area('Ask any question from NCERT 11th and 12th Chemistry Texts!')
     generate_response_btn = st.button('Run RAG')
     
     st.subheader('Response')
