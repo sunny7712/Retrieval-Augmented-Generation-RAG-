@@ -28,6 +28,7 @@ def load_vector_store():
 #model 
 def load_model():  
     load_dotenv()  
+    os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
     repo_id = 'llmware/bling-sheared-llama-1.3b-0.1'
     llm = HuggingFaceHub(
         repo_id = repo_id,
